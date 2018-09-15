@@ -21,4 +21,12 @@ public class TestApi {
 		list.add("This is a test message from 8763 port! origin is: " + from);
 		return list;
 	}
+	
+	@GetMapping("test-1")
+	public List<String> test_1(HttpServletRequest request, HttpServletResponse response) {
+		String from = request.getParameter("from");
+		List<String> list = new ArrayList<>();
+		list.add("This is a test_1 message from 8763 port! origin is: " + from);
+		return list;
+	}
 }

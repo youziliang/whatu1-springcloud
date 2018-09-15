@@ -26,7 +26,7 @@ public class TestService {
 		Map<String, String> params = new HashMap<>();
 		params.put("from", from);
 		// 吐槽，restTemplate的GET请求发送参数真是鸡肋，非得用占位符，还不如直接发个GET链接
-		return restTemplate.getForObject("http://eurka-producer/api/test?from={from}", List.class, params);
+		return restTemplate.getForObject("http://zuul-server/api/test?from={from}", List.class, params);
 	}
 
 	/**
