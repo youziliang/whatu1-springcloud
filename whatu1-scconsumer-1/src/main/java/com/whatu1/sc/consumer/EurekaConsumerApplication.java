@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @Description 启动服务消費者（Feign）
+ * @Description 分佈式配置中心服務器
  * @author DU
  * @Attention 啓動文件要在Controller的父級
  */

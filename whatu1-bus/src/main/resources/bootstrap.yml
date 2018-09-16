@@ -1,0 +1,43 @@
+server:
+ port: 8880
+ 
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8761/eureka/
+   
+spring:
+ application:
+  name: config-client
+  
+ rabbitmq:
+  host: 106.14.226.64
+  port: 5672
+  username: root
+  password: youziliang
+
+ cloud:
+  config:
+   uri: http://localhost:8888/
+   #配置仓库的分支
+   label: master
+   #dev开发环境配置文件；#test测试环境；#pro正式环境
+   profile: dev
+   
+   discovery:
+    #是否从配置中心读取文件
+    enabled: true
+    #配置中心的servieId，即服务名
+    serviceId: config-server
+    
+  bus:
+   enabled: true
+   
+  trace:
+   enabled: true
+   
+management:
+ endpoints:
+  web:
+   exposure:
+    include: bus-refresh
