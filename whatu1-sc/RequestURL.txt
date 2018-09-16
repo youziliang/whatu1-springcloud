@@ -21,3 +21,9 @@ http://www.whatu1.com:15672
 
 #Zipkin链路追踪
 http://www.whatu1.com:9411
+
+#Zipkin测试调用方
+http://localhost:8988/callMiya
+
+#Zipkin测试被调用方
+http://localhost:8989/miya
