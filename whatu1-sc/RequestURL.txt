@@ -27,3 +27,29 @@ http://localhost:8988/callMiya
 
 #Zipkin测试被调用方
 http://localhost:8989/miya
+
+#分佈式配置中心服務器集群
+http://eurka-server-cluster-1:8790/eureka/
+
+#服务提供者
+http://localhost:8762/test?from=Ribbon
+http://localhost:8763/test?from=Feign
+http://localhost:8766/test?from=Feign 针对服务提供者集群
+
+#断路器监控producer测试
+http://localhost:8767/api/test?from=Ribbon
+
+#Hystrix Dashboard流数据
+http://localhost:8767/actuator/hystrix.stream
+
+#Hystrix Dashboard图形展示
+http://localhost:8767/hystrix
+
+#断路器聚合监控producer测试
+http://localhost:8777/api/test?from=Feign
+
+#Hystrix Dashboard聚合流数据
+http://localhost:8777/turbine.stream
+
+#Hystrix Dashboard聚合图形展示
+http://localhost:8777/hystrix

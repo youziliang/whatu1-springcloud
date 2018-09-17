@@ -6,7 +6,7 @@
 		<artifactId>whatu1-sc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.whatu1.configserver</groupId>
+	<groupId>com.whatu1.config</groupId>
 	<artifactId>whatu1-configserver</artifactId>
 	<name>whatu1-config-server</name>
 	<description>whatu1-config-server</description>

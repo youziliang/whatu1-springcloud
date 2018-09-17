@@ -1,0 +1,30 @@
+server:
+ port: 8777
+
+spring:
+ application:
+  name: eurka-hd-producer
+
+eureka:
+ client:
+  serviceUrl:
+   #注冊中心地址
+   defaultZone: http://localhost:8761/eureka/
+   
+management:
+ endpoints:
+  web: 
+   exposure:
+    include: "*"  
+   cors:  
+    allowed-origins: "*"  
+    allowed-methods: "*"
+    
+turbine:
+ app-config: service-hi,service-lucy
+ aggregator:
+  clusterConfig: default
+ clusterNameExpression: new String("default")
+ combine-host: true
+ instanceUrlSuffix:
+  default: actuator/hystrix.stream

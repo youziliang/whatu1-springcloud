@@ -6,10 +6,10 @@
 		<artifactId>whatu1-sc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.whatu1.scconsumer</groupId>
-	<artifactId>whatu1-scconsumer-1</artifactId>
-	<name>whatu1-springcloud-consumer-1</name>
-	<description>whatu1-springcloud-consumer-1</description>
+	<groupId>com.whatu1.scproducer</groupId>
+	<artifactId>whatu1-hystrix-dashboard-scproducer</artifactId>
+	<name>whatu1-hystrix-dashboard-scproducer</name>
+	<description>whatu1-hystrix-dashboard-scproducer</description>
 
 	<dependencies>
 		<dependency>
@@ -21,9 +21,16 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
 		</dependency>
 	</dependencies>
-
 </project>

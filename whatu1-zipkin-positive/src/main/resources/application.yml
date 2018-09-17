@@ -1,0 +1,9 @@
+server:
+ port: 8988
+
+spring:
+ application:
+  name: zipkin-positive
+
+ zipkin:
+  base-url: http://www.whatu1.com:9411

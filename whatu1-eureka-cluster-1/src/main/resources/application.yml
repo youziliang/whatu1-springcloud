@@ -1,0 +1,18 @@
+server:
+ port: 8790
+
+spring:
+ application:
+  name: eurka-server-cluster-1
+
+eureka:
+ instance:
+  hostname: eurka-server-cluster-1
+  
+ client:
+  serviceUrl:
+   defaultZone: http://eurka-server-cluster-2:8791/eureka/
+   
+  #eureka默认情况下，也会把自己当做客户端来注册自己，加上这两个变量
+  registerWithEureka: false
+  fetchRegistry: false

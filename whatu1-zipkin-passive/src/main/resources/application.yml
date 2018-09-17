@@ -1,0 +1,9 @@
+server:
+ port: 8989
+
+spring:
+ application:
+  name: zipkin-passive
+
+ zipkin:
+  base-url: http://www.whatu1.com:9411

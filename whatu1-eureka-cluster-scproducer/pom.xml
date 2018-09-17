@@ -6,24 +6,31 @@
 		<artifactId>whatu1-sc</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.whatu1.scconsumer</groupId>
-	<artifactId>whatu1-scconsumer-1</artifactId>
-	<name>whatu1-springcloud-consumer-1</name>
-	<description>whatu1-springcloud-consumer-1</description>
+	<groupId>com.whatu1.scproducer</groupId>
+	<artifactId>whatu1-eureka-cluster-scproducer</artifactId>
+	<name>whatu1-eureka-cluster-scproducer</name>
+	<description>whatu1-eureka-cluster-scproducer</description>
 
 	<dependencies>
+		<!-- euraka作爲服務提供者 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
